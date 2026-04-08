@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:soundctionary/models/playlist.dart';
-import 'package:soundctionary/models/user.dart';
 import 'models/album.dart';
 import 'models/artist.dart';
+import 'models/playlist.dart';
+import 'models/user.dart';
 import 'pages/home_page.dart';
 import 'pages/search_page.dart';
 import 'pages/profile_page.dart';
@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Soundictionary',
+      title: 'Groov',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1DB954)),
       ),
-      home: const MyHomePage(title: 'Soundictionary'),
+      home: const MyHomePage(title: 'Groov'),
     );
   }
 }

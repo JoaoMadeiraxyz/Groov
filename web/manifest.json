@@ -1,6 +1,6 @@
 {
-    "name": "soundctionary",
-    "short_name": "soundctionary",
+    "name": "groov",
+    "short_name": "groov",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

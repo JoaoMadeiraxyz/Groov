@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(top: 36.0, bottom: 8.0, left: 32.0),
             child: Text(
-              'Soundictionary',
+              'Groov',
               style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
             ),
           ),

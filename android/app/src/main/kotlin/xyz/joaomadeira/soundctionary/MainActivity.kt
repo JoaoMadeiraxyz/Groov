@@ -1,4 +1,4 @@
-package xyz.joaomadeira.soundctionary
+package xyz.joaomadeira.groov
 
 import io.flutter.embedding.android.FlutterActivity
 

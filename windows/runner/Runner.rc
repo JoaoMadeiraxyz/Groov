@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "xyz.joaomadeira" "\0"
-            VALUE "FileDescription", "soundctionary" "\0"
+            VALUE "FileDescription", "groov" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "soundctionary" "\0"
+            VALUE "InternalName", "groov" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 xyz.joaomadeira. All rights reserved." "\0"
-            VALUE "OriginalFilename", "soundctionary.exe" "\0"
-            VALUE "ProductName", "soundctionary" "\0"
+            VALUE "OriginalFilename", "groov.exe" "\0"
+            VALUE "ProductName", "groov" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
