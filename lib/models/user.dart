@@ -1,10 +1,12 @@
 class User {
+  final String id;
   final String imageUrl;
   final String name;
   final int followers;
   final int following;
 
   const User({
+    required this.id,
     required this.imageUrl,
     required this.name,
     required this.followers,

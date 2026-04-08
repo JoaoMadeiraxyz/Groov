@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:soundctionary/models/playlist.dart';
+import 'package:soundctionary/models/user.dart';
 import 'models/album.dart';
 import 'models/artist.dart';
 import 'pages/home_page.dart';
@@ -35,6 +37,29 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
+
+  final User _currentUser = const User(
+    id: "1",
+    imageUrl: 'https://i.scdn.co/image/ab6775700000ee8533e25cf421a9241916ac09d3',
+    name: 'João Victor',
+    followers: 128,
+    following: 64,
+  );
+
+  final List<Playlist> _playlists = const [
+    Playlist(name: 'Meu Top Mix', public: true, imageUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png'),
+    Playlist(name: 'Late Night Vibes', public: false, imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebd00c2ff422829437e6b5f1e0'),
+    Playlist(name: 'Rock Pesado', public: true, imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb3dc0577ed61ec73b498a56ee'),
+    Playlist(name: 'Chill & Focus', public: false, imageUrl: 'https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png'),
+  ];
+
+  final List<Map<String, dynamic>> _genres = const [
+    {'label': 'Alternative', 'value': 35, 'color': Color(0xFF1DB954)},
+    {'label': 'R&B',         'value': 25, 'color': Color(0xFFAE17A7)},
+    {'label': 'Pop',         'value': 20, 'color': Color(0xFF2D46B9)},
+    {'label': 'Rock',        'value': 12, 'color': Color(0xFFE91429)},
+    {'label': 'Lo-fi',       'value': 8,  'color': Color(0xFFFF6437)},
+  ];
 
   final List<Album> _albums = const [
     Album(
@@ -94,7 +119,12 @@ class _MyHomePageState extends State<MyHomePage> {
       case 1:
         return const SearchPage();
       case 2:
-        return const ProfilePage();
+        return ProfilePage(
+          user: _currentUser,
+          favoriteArtists: _artists,
+          playlists: _playlists,
+          genres: _genres,
+        );
       default:
         return const SizedBox.shrink();
     }
