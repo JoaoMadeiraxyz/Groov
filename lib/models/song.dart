@@ -1,17 +1,13 @@
-import 'song.dart';
-
-class Album {
+class Song {
   final String title;
   final String artist;
   final String imageUrl;
-  final int year;
-  final List<Song> songs;
+  final String duration;
 
-  const Album({
+  const Song({
     required this.title,
     required this.artist,
     required this.imageUrl,
-    required this.year,
-    required this.songs,
+    required this.duration,
   });
 }

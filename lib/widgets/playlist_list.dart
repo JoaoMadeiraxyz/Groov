@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/playlist.dart';
+import '../pages/playlist_page.dart';
 
 class PlaylistList extends StatelessWidget {
   final List<Playlist> playlists;
@@ -34,6 +35,12 @@ class PlaylistList extends StatelessWidget {
           itemBuilder: (context, i) {
             final playlist = playlists[i];
             return ListTile(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => PlaylistPage(playlist: playlist),
+                ),
+              ),
               contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(4),

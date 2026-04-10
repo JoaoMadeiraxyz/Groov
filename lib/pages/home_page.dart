@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/album.dart';
 import '../models/artist.dart';
+import '../pages/album_page.dart';
+import '../pages/artist_page.dart';
 import '../widgets/horizontal_card_list.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,6 +42,10 @@ class HomePage extends StatelessWidget {
             items: albums
                 .map((a) => {'imageUrl': a.imageUrl, 'title': a.title, 'subtitle': a.artist})
                 .toList(),
+            onTap: (i) => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => AlbumPage(album: albums[i])),
+            ),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 32.0, top: 16.0, bottom: 16.0),
@@ -52,6 +58,10 @@ class HomePage extends StatelessWidget {
             items: artists
                 .map((a) => {'imageUrl': a.imageUrl, 'title': a.name})
                 .toList(),
+            onTap: (i) => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => ArtistPage(artist: artists[i])),
+            ),
           ),
           const SizedBox(height: 24),
         ],
